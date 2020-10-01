@@ -61,14 +61,14 @@ void MUSART1_voidTransmit(char* word)
 	}
 }
 
-u8 MUSART1_u8Receive(void)
+u8 MUSART1_u8Receive(u32 Copy_u32timeout)
 {
 	u32 timeout = 0;
 	s8 Local_u8ReceivedData = 0;
 	while( (GET_BIT((USART1 -> SR), RXNE) ) == 0)
 	{
 		timeout++;
-		if (timeout == 30000)
+		if (timeout == Copy_u32timeout)
 		{
 			Local_u8ReceivedData = 255;
 			break;

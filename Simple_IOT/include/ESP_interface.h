@@ -10,6 +10,6 @@
 void HESP_voidInit(void);
 void HESP_voidConnctToRouter(char* Copy_u8StrSsid, char* Copy_u8StrPassword);
 void HESP_voidConnectToServer(char* Copy_u8StrMode, char* Copy_u8StrIP, char* Copy_u8StrPort);
-void HESP_voidExecuteRequest(char* Copy_u8StrRequest);
+u8 HESP_u8ExecuteRequest(char* Copy_u8StrRequest);
 
 #endif
